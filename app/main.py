@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from utils import getAcessToken
-from config import consumer_key, consumer_secret, accesstoken_url
+from config import settings
 
 app = FastAPI()
 
@@ -13,5 +13,5 @@ async def root():
 @app.get("/access_token")
 async def Token() -> str:
     # make the request
-    at = await getAcessToken(accesstoken_url, consumer_key, consumer_secret)
+    at = await getAcessToken(settings.accesstoken_url, settings.consumer_key, settings.consumer_secret)
     return at["access_token"]
