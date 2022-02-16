@@ -1,6 +1,7 @@
 <h1 align="center"><b>USSD STK-Push pipeline
 </b></h1>
 
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 ## <b>Description</b>
 Implemention of a ussd -> stk-push mobile payment pipeline with Fastapi, AT-USSD and M-Pesa Express API
 
