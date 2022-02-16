@@ -24,6 +24,10 @@ class Settings(BaseSettings):
     consumer_key: str = Field(..., env="CONSUMER_KEY")
     consumer_secret: str = Field(..., env="CONSUMER_SECRET")
     accesstoken_url: str = Field(..., env="ACCESSTOKEN_URL")
+    lnm_url: str = Field(..., env="LNM_URL")
+    business_shortcode: str = Field(..., env="BUSINESS_SHORTCODE")
+    lnm_callback_url: str = Field(..., env="LNM_CALLBACK_URL")
+    lnm_passkey: str = Field(..., env="LNM_PASSKEY")
 
     class Config:
         env_file = dotenv_path
