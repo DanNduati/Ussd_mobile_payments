@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from utils import getAcessToken
+from accessToken import getAcessToken
 from config import settings
 
 app = FastAPI()
