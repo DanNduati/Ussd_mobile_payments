@@ -3,7 +3,12 @@ from accessToken import getAcessToken
 from stkpush import initiate_payment
 from config import settings
 from utils import get_timestamp, generate_password
+from database import engine
+import models
 
+# create database tables
+# ToDo : initialize database and run migrations with alembic instead
+models.Base.metadata.create_all(bind=engine)
 app = FastAPI()
 
 

@@ -10,9 +10,11 @@ class User(Base):
     phonenumber = Column(Integer, nullable=False)
     units = relationship("Unit", back_populates="owner")
 
+
 class Unit(Base):
     __tablename__ = "units"
     id = Column(Integer, primary_key=True, index=True)
     value = Column(Integer, nullable=False)
-    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
+    user_id = Column(Integer, ForeignKey(
+        "users.id", ondelete="CASCADE"), nullable=False)
     owner = relationship("User", back_populates="units")
