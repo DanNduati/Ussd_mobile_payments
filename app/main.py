@@ -4,8 +4,7 @@ from stkpush import initiate_payment
 from config import settings
 from utils import get_timestamp, generate_password
 from database import engine
-
-
+from .routers import users, units
 # create database tables
 # ToDo : initialize database and run migrations with alembic instead
 # models.Base.metadata.create_all(bind=engine)
@@ -26,3 +25,6 @@ async def stkPush(amount: int = 1):
     # initate stkpush
     r = await initiate_payment(settings.lnm_url, access_token, settings.business_shortcode, settings.lnm_passkey, timestamp, amount, 254723060846, settings.lnm_callback_url)
     return r
+
+app.include_router(users.router)
+app.include_router(units.router)
