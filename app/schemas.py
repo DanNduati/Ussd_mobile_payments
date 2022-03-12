@@ -1,8 +1,9 @@
 from pydantic import BaseModel
-from typing import List
+from typing import List, Optional
 
 
 class UnitBase(BaseModel):
+    id: int
     value: int
     user_id: int
 
@@ -10,10 +11,24 @@ class UnitBase(BaseModel):
         orm_mode = True
 
 
+class UnitCreate(BaseModel):
+    value: int
+    user_id: int
+
+
 class UserBase(BaseModel):
+    id: int
     name: str
-    phonenumber: str
-    items: List[UnitBase]
+    phonenumber: int
+
+
+class UserCreate(BaseModel):
+    name: str
+    phonenumber: int
+
+
+class UserResponse(UserBase):
+    units: List[UnitBase]
 
     class Config:
         orm_mode = True
