@@ -28,6 +28,7 @@ class Settings(BaseSettings):
     business_shortcode: str = Field(..., env="BUSINESS_SHORTCODE")
     lnm_callback_url: str = Field(..., env="LNM_CALLBACK_URL")
     lnm_passkey: str = Field(..., env="LNM_PASSKEY")
+    sqlalchemy_database_uri: str = Field(..., env="DATABASE_URI")
 
     class Config:
         env_file = dotenv_path
