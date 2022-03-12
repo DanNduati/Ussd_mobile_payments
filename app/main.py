@@ -19,11 +19,11 @@ async def root():
 
 
 @app.get("/stk_push")
-async def stkPush():
+async def stkPush(amount: int = 1):
     # get access token
-    at = await getAcessToken(settings.accesstoken_url,
-                             settings.consumer_key, settings.consumer_secret)
+    access_token = await getAcessToken(settings.accesstoken_url, settings.consumer_key, settings.consumer_secret)
+    timestamp = get_timestamp()
     # initate stkpush
-    r = await initiate_payment(settings.lnm_url, at["access_token"], settings.business_shortcode, settings.lnm_passkey, get_timestamp(), 1, 254723060846, settings.lnm_callback_url)
+    r = await initiate_payment(settings.lnm_url, access_token, settings.business_shortcode, settings.lnm_passkey, timestamp, amount, 254723060846, settings.lnm_callback_url)
     print("done")
     return r
