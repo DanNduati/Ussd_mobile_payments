@@ -10,9 +10,8 @@ from .routers import users, units
 app = FastAPI()
 
 
-@app.get("/")
+@app.post("/")
 async def root():
-    print(generate_password(settings.business_shortcode, settings.lnm_passkey))
     return {"message": "Hello"}
 
 
