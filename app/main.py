@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from accessToken import getAcessToken
-from stkpush import initiate_payment
+from services.lnm import initiate_payment
 from config import settings
-from utils import get_timestamp, generate_password
+from utils.lnm import get_timestamp, generate_password
 from database import engine
 from .routers import users, units
 # create database tables

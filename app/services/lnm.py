@@ -1,5 +1,5 @@
 import httpx
-from utils import generate_password
+from utils.lnm import generate_password
 # post request
 
 
