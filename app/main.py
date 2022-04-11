@@ -3,7 +3,7 @@ from services.lnm import initiate_payment,getAcessToken
 from config import settings
 from utils.lnm import get_timestamp, generate_password
 from database import engine
-from .routers import users, units
+from .routers import users, units, lnm
 # create database tables
 # ToDo : initialize database and run migrations with alembic instead
 # models.Base.metadata.create_all(bind=engine)
@@ -26,3 +26,4 @@ async def stkPush(amount: int = 1):
 
 app.include_router(users.router)
 app.include_router(units.router)
+app.include_router(lnm.router)
