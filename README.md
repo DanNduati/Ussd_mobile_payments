@@ -29,8 +29,10 @@ pip install -r requirements.txt
 ```
 Create a `.env` file similar to [`.env.example`](.env.example).
 ## <b>Outcome</b>
-
-
+### Run uvicorn server
+```bash
+uvicorn app.main:app --reload
+```
 
 ## <b>Inspiration</b>
 NYEWASCO [ussd water bill enquiry and payment](http://www.nyewasco.co.ke/ussd-water-bill-enquiry/)
