@@ -2,6 +2,12 @@ import httpx
 from utils.lnm import generate_password
 # post request
 
+async def getAcessToken(url: str, consumer_key: str, consumer_secret: str):
+    # make the request
+    async with httpx.AsyncClient() as client:
+        response = await client.get(url, auth=(consumer_key, consumer_secret))
+        access_token = response.json()["access_token"]
+    return access_token
 
 async def initiate_payment(url: str, access_token: str, busines_shortcode: int, lnm_passkey: str, timestamp: str, amount: int, phone_number: int, callback_url: str):
     headers = {
