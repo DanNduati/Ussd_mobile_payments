@@ -32,3 +32,10 @@ class UserResponse(UserBase):
 
     class Config:
         orm_mode = True
+
+
+class UssdResponse(BaseModel):
+    session_id: str
+    service_code: str
+    phone_number: str
+    text: str
