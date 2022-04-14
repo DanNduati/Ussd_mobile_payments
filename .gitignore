@@ -7,3 +7,4 @@ ussd_app.db
 data/
 #environment variable backup
 app/.env.bak
+scripts/ngrok.log
