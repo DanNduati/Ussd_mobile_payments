@@ -28,7 +28,7 @@ async def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
 
 
 @router.get("/{phone_number}", response_model=schemas.UserResponse)
-async def get_users(phone_number: int, db: Session = Depends(get_db)):
+async def get_users(phone_number: str, db: Session = Depends(get_db)):
     """
     Get user by phone number
     """

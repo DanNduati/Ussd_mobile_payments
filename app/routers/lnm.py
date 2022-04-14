@@ -1,6 +1,5 @@
 import json
 from fastapi import APIRouter, Request
-from pydantic import BaseModel, Json
 
 router = APIRouter(
     prefix="/payments",

@@ -33,6 +33,7 @@ async def initiate_payment(url: str, access_token: str, busines_shortcode: int, 
     }
 
     async with httpx.AsyncClient() as client:
+        timeout = httpx.Timeout(None)
         r = await client.post(url, headers=headers, json=payload)
     return r.json()
 
@@ -43,3 +44,4 @@ async def send_stk(amount: int):
     timestamp = get_timestamp()
     # initate stkpush
     r = await initiate_payment(settings.lnm_url, access_token, settings.business_shortcode, settings.lnm_passkey, timestamp, amount, 254723060846, settings.lnm_callback_url)
+    print(r)
