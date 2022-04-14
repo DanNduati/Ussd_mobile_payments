@@ -23,4 +23,5 @@ echo
 echo "NGROK_PUBLIC_URL => [ $NGROK_PUBLIC_URL ]"
 #edit lnm callback with new ngrok tunnel hostname
 #sed -i.bak "s/NGROK_PUBLIC_URL=/NGROK_PUBLIC_URL=${NGROK_PUBLIC_URL}/g" ../app/.env
+sed -i.bak 's|NGROK_PUBLIC_URL=.*|NGROK_PUBLIC_URL='"${NGROK_PUBLIC_URL}"'|g' ../app/.env
 sed -i.bak 's|LNM_CALLBACK_URL=.*|LNM_CALLBACK_URL='"${NGROK_PUBLIC_URL}/payments/confirmation"'|g' ../app/.env
