@@ -52,13 +52,13 @@ NGROK_PUBLIC_URL => [ https://d8eb-197-232-61-213.ngrok.io ]
 ## <b>Outcome</b>
 <p align="center">
 
-| Registered User                                          	| Unregistered user                                          	|
-|----------------------------------------------------------	|------------------------------------------------------------	|
-| <img height="500" src="images/registered_1.png"></img>   	| <img height="500" src=" images/unregistered_1.png "></img> 	|
-| <img height="500" src=" images/registered_2.png "></img> 	| WIP                                                        	|
-| <img height="500" src=" images/registered_3.png "></img> 	| WIP                                                        	|
-| <img height="500" src=" images/registered_4.png "></img> 	| WIP                                                        	|
-| <img height="500" src=" images/phone.jpg "></img> 	| WIP                                                        	|
+| Registered User                                          | Unregistered user                                          |
+|----------------------------------------------------------|------------------------------------------------------------|
+| <img height="500" src="images/registered_1.png"></img>   | <img height="500" src="images/unregistered_1.png"></img>   |
+| <img height="500" src="images/registered_2.png"></img>   | WIP                                                        |
+| <img height="500" src="images/registered_3.png"></img>   | WIP                                                        |
+| <img height="500" src="images/registered_4.png"></img>   | WIP                                                        |
+| <img height="500" src="images/phone.jpg"></img>          | WIP                                                        |
 
 </p>
 
